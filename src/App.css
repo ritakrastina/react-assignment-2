@@ -1,0 +1,89 @@
+.container {
+  padding: 3% 10%;
+}
+
+.button-container,
+.loading-container {
+  clear: both;
+  padding: 20px 0;
+  float: right;
+}
+
+.message-info,
+.message-success,
+.message-error {
+  clear: both;
+  padding: 15px;
+  border: 1px solid;
+}
+
+.message-info {
+  color: blue;
+}
+
+.message-success {
+  color: green;
+}
+
+.message-error {
+  color: red;
+}
+
+.button-info-text {
+  margin: 0 10px;
+  color: gray;
+  font-size: 12px;
+}
+
+.drop-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 300px;
+  border: 2px dashed lightgray;
+  color: gray;
+  cursor: pointer;
+  float: left;
+  padding: 20px;
+  text-align: center;
+}
+
+.drop-container:hover {
+  background: #f3f3f3;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-list-container {
+  height: 342px;
+  width: 70%;
+  overflow-y: scroll;
+  border: 1px solid lightgray;
+  float: right;
+}
+
+.file-row {
+  padding: 10px;
+}
+
+.file-row:hover {
+  background: #f3f3f3;
+}
+
+.file-error-message {
+  color: red;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.button-delete,
+.button-close {
+  float: right;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
