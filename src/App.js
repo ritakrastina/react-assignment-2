@@ -65,8 +65,10 @@ function App() {
       <FileSelector ref={fileSelectorRef} />
 
       <div className="button-container">
-        <button onClick={() => sendEmails()}>Send emails</button>
         <span className="button-info-text">*only valid files are used</span>
+        <button className="button-send" onClick={() => sendEmails()}>
+          Send emails
+        </button>
       </div>
 
       <Loading loading={loading} />

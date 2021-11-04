@@ -4,25 +4,23 @@ const Messages = ({ type, text, object, onClose }) => {
   return (
     <Fragment>
       {type && (
-        <div className={`message-${type}`}>
-          <button
-            className="button-close"
-            onClick={onClose}
-            title="Close messages"
-          >
-            x
+        <div className="messages-container">
+          <button className="button-close" onClick={onClose}>
+            Close messages
           </button>
-          {text}
-          {object && (
-            <span>
-              <span> {object.error}</span>
-              <ul>
-                {object.emails?.map((email, indx) => (
-                  <li key={indx}>{email}</li>
-                ))}
-              </ul>
-            </span>
-          )}
+          <div className={`message-${type}`}>
+            {text}
+            {object && (
+              <span>
+                <span> {object.error}</span>
+                <ul>
+                  {object.emails?.map((email, indx) => (
+                    <li key={indx}>{email}</li>
+                  ))}
+                </ul>
+              </span>
+            )}
+          </div>
         </div>
       )}
     </Fragment>

@@ -1,3 +1,41 @@
+body {
+  color: #3f5b6e;
+  font-size: 14px;
+}
+
+h1 {
+  font-family: monospace;
+}
+
+button {
+  border-radius: 5px;
+  font-size: 14px;
+  border: 1px solid #5d8daf;
+}
+
+button:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.button-delete,
+.button-close {
+  float: right;
+  background: none;
+  color: #5d8daf;
+}
+
+.button-close {
+  margin: 5px 0;
+}
+
+.button-send {
+  padding: 8px 14px;
+  background: #5d8daf;
+  color: #ecf4f8;
+  font-weight: bold;
+}
+
 .container {
   padding: 3% 10%;
 }
@@ -9,29 +47,35 @@
   float: right;
 }
 
+.messages-container {
+  clear: both;
+}
+
 .message-info,
 .message-success,
 .message-error {
   clear: both;
   padding: 15px;
-  border: 1px solid;
+  border-radius: 10px;
 }
 
 .message-info {
-  color: blue;
+  color: #3f5b6e;
+  background: #ecf4f8;
 }
 
 .message-success {
-  color: green;
+  color: #4b6e2c;
+  background: #f0f5d6;
 }
 
 .message-error {
-  color: red;
+  color: #e63946;
+  background: #fde3e5;
 }
 
 .button-info-text {
   margin: 0 10px;
-  color: gray;
   font-size: 12px;
 }
 
@@ -41,16 +85,16 @@
   justify-content: center;
   width: 20%;
   height: 300px;
-  border: 2px dashed lightgray;
-  color: gray;
+  border: 2px dashed #99c1de;
   cursor: pointer;
   float: left;
   padding: 20px;
   text-align: center;
+  border-radius: 10px;
 }
 
 .drop-container:hover {
-  background: #f3f3f3;
+  background: #ecf4f8;
 }
 
 .file-input {
@@ -61,8 +105,9 @@
   height: 342px;
   width: 70%;
   overflow-y: scroll;
-  border: 1px solid lightgray;
+  border: 1px solid #99c1de;
   float: right;
+  border-radius: 10px;
 }
 
 .file-row {
@@ -70,18 +115,13 @@
 }
 
 .file-row:hover {
-  background: #f3f3f3;
+  background: #ecf4f8;
 }
 
 .file-error-message {
-  color: red;
+  color: #e63946;
   margin: 0 10px;
   font-size: 14px;
-}
-
-.button-delete,
-.button-close {
-  float: right;
 }
 
 .strike-through {
