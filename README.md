@@ -6,6 +6,10 @@ React application for managing email files, reading data and sending email list 
 
 - React
 
+## Code formatted with
+
+- [Prettier](https://prettier.io/)
+
 ## Development
 
 To run application, clone `master` branch locally, execute following commands and open browser on http://localhost:3000/.
