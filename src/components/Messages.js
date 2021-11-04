@@ -10,7 +10,7 @@ const Messages = ({ type, text, object, onClose }) => {
           </button>
           <div className={`message-${type}`}>
             {text}
-            {object && (
+            {!!object.error && (
               <span>
                 <span> {object.error}</span>
                 <ul>

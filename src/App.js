@@ -16,7 +16,7 @@ function App() {
     setMessage({});
   };
 
-  const sendEmails = () => {
+  const sendEmails = async () => {
     clearMessages();
 
     const validFileList = fileSelectorRef.current?.getValidFileList() || [];
@@ -30,32 +30,30 @@ function App() {
     } else {
       setLoading(true);
 
-      readFileListData(validFileList).then((value) => {
-        postEmails(value)
-          .then((result) => {
-            setLoading(false);
+      try {
+        const emailList = await readFileListData(validFileList);
+        const postEmailsResponse = await postEmails(emailList);
 
-            if (result.error) {
-              setMessage({
-                type: "error",
-                text: "There was an error:",
-                object: result,
-              });
-            } else {
-              fileSelectorRef.current?.clearFileList();
+        setLoading(false);
 
-              setMessage({
-                type: "success",
-                text: "Emails sent successfully!",
-                object: {},
-              });
-            }
-          })
-          .catch((error) => {
-            setLoading(false);
-            setMessage(error);
+        if (postEmailsResponse.error) {
+          setMessage({
+            type: "error",
+            text: "There was an error:",
+            object: postEmailsResponse,
           });
-      });
+        } else {
+          fileSelectorRef.current?.clearFileList();
+          setMessage({
+            type: "success",
+            text: "Emails sent successfully!",
+            object: {},
+          });
+        }
+      } catch (error) {
+        setLoading(false);
+        setMessage(error);
+      }
     }
   };
 

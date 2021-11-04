@@ -27,7 +27,7 @@ function FileSelector(props, ref) {
 
   const fileDrop = (e) => {
     e.preventDefault();
-    const files = e.dataTransfer.files;
+    const { files } = e.dataTransfer;
     if (files.length) {
       handleFiles(files);
     }
