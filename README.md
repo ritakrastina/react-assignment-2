@@ -4,7 +4,7 @@ React application for managing email files, reading data and sending email list 
 
 ## Built with
 
-- React
+- [React](https://reactjs.org/)
 
 ## Code formatted with
 
